@@ -1,7 +1,7 @@
 # Análise Exploratória e Classificação de Vinhos
 
-> **Aluno(a):** SUBSTITUA PELO SEU NOME  
-> **Disciplina:** Machine Learning / Ciência de Dados  
+> **Aluno(a):** Arthur Queiroz Uchôa
+> **Disciplina:** Machine Learning 
 > **Dataset:** [Wine Quality — UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/186/wine+quality)
 
 ## Visão geral
@@ -432,32 +432,3 @@ print(f"Acurácia de teste: {ranking.iloc[0]['acurácia']:.2%}")
 
 O conjunto representa vinhos verdes portugueses; os resultados não devem ser generalizados automaticamente para vinhos de todos os países, uvas e métodos de produção. Além disso, as medições são laboratoriais e não substituem uma avaliação completa do processo produtivo.
 
-### Pontos para a arguição oral
-
-1. **Por que criar `tipo_vinho`?** Os dados oficiais vêm em dois arquivos separados. A origem de cada arquivo fornece um alvo objetivo, documentado e sem regra arbitrária.
-2. **Por que remover `quality`?** É uma avaliação sensorial. A pergunta do modelo é diferenciar o tipo pela química, não por uma nota já atribuída.
-3. **Por que 80/20 estratificado?** Mantém um teste independente de tamanho adequado e preserva a proporção de tintos e brancos.
-4. **Por que padronizar somente KNN?** KNN usa distância; Random Forest usa limiares de decisão.
-5. **Por que F1 macro?** Ela dá peso igual às duas classes, reduzindo o efeito do desbalanceamento.
-
----
-
-## Como reproduzir
-
-```bash
-pip install -r requirements.txt
-jupyter notebook
-```
-
-Abra `analise_wine_quality_tipo_vinho.ipynb` e use **Run All**. O notebook baixa os dados oficiais automaticamente na primeira execução e gera `melhor_modelo_tipo_vinho.joblib`.
-
-## Estrutura do repositório
-
-```text
-.
-├── README.md                                # relatório completo visível na página inicial
-├── analise_wine_quality_tipo_vinho.ipynb    # notebook executável
-├── requirements.txt
-├── .gitignore
-└── assets/                                  # gráficos mostrados neste README
-```
